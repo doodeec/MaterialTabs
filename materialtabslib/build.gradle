@@ -20,7 +20,7 @@ android {
 task copyLibraryFile(type: Copy) {
     from "${buildDir}/outputs/aar/${project.name}-debug.aar"
     into "${rootDir}/library/"
-    rename ("${project.name}-debug.aar", "${project.name}-${android.defaultConfig.versionName}.aar")
+    rename("${project.name}-debug.aar", "materialtabs-${android.defaultConfig.versionName}.aar")
 }
 
 task buildLibrary(dependsOn: ['assemble', 'copyLibraryFile']) {
