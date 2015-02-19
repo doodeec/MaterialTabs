@@ -1,7 +1,6 @@
 #MaterialTabs
-============
 
-based on **MaterialTabs by neokree** ([repo](https://github.com/neokree/MaterialTabs))
+based on **MaterialTabs by neokree** ([repository](https://github.com/neokree/MaterialTabs))
 
 ### Author
 Dusan Bartos<br/>
