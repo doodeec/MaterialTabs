@@ -20,10 +20,28 @@ android {
 task copyLibraryFile(type: Copy) {
     from "${buildDir}/outputs/aar/${project.name}-debug.aar"
     into "${rootDir}/library/"
-    rename("${project.name}-debug.aar", "materialtabs-${android.defaultConfig.versionName}.aar")
+    rename("${project.name}-debug.aar", "materialtabs-${android.defaultConfig.versionName}.jar")
 }
 
 task buildLibrary(dependsOn: ['assemble', 'copyLibraryFile']) {
+}
+
+apply plugin: 'maven'
+task generatePom << {
+    pom {
+        project {
+            version android.defaultConfig.versionName
+            groupId "com.doodeec.utils"
+            packaging "jar"
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+        }
+    }.writeTo("$buildDir/${project.name}-${android.defaultConfig.versionName}.pom")
 }
 
 dependencies {
