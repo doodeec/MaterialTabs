@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MaterialTabHost">
+        <attr name="materialtab_primaryColor" format="color|reference"/>
+        <attr name="materialtab_accentColor" format="color|reference"/>
+        <attr name="materialtab_iconColor" format="color|reference"/>
+        <attr name="materialtab_textColor" format="color|reference"/>
+    </declare-styleable>
+
+</resources>
