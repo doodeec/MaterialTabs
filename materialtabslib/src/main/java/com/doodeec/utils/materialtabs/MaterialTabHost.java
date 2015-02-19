@@ -1,4 +1,4 @@
-package it.neokree.materialtabs;
+package com.doodeec.utils.materialtabs;
 
 import android.content.Context;
 import android.content.res.Resources;

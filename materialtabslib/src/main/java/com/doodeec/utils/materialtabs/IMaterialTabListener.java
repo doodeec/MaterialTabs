@@ -1,4 +1,4 @@
-package it.neokree.materialtabs;
+package com.doodeec.utils.materialtabs;
 
 /**
  * Listener for material tab selection

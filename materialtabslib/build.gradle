@@ -7,14 +7,23 @@ android {
     defaultConfig {
         minSdkVersion 11
         targetSdkVersion 21
+        versionCode 1
+        versionName "0.1.0"
     }
     buildTypes {
         release {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    productFlavors {
-    }
+}
+
+task copyLibraryFile(type: Copy) {
+    from "${buildDir}/outputs/aar/${project.name}-debug.aar"
+    into "${rootDir}/library/"
+    rename ("${project.name}-debug.aar", "${project.name}-${android.defaultConfig.versionName}.aar")
+}
+
+task buildLibrary(dependsOn: ['assemble', 'copyLibraryFile']) {
 }
 
 dependencies {
