@@ -12,15 +12,16 @@ android {
     }
     buildTypes {
         release {
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 task copyLibraryFile(type: Copy) {
-    from "${buildDir}/outputs/aar/${project.name}-debug.aar"
+    from "${buildDir}/outputs/aar/${project.name}-release.aar"
     into "${rootDir}/library/"
-    rename("${project.name}-debug.aar", "materialtabs-${android.defaultConfig.versionName}.jar")
+    rename("${project.name}-release.aar", "materialtabs-${android.defaultConfig.versionName}.aar")
 }
 
 task buildLibrary(dependsOn: ['assemble', 'copyLibraryFile']) {

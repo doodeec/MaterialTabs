@@ -15,3 +15,15 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-keep class com.doodeec.utils.materialtabs.MaterialTab {
+    public *;
+}
+
+-keep class com.doodeec.utils.materialtabs.MaterialTabHost {
+    public *;
+}
+
+-keep class com.doodeec.utils.materialtabs.IMaterialTabListener {
+    public *;
+}
