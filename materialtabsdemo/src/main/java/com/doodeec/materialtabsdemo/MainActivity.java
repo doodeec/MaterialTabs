@@ -8,9 +8,9 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 
-import it.neokree.materialtabs.IMaterialTabListener;
-import it.neokree.materialtabs.MaterialTab;
-import it.neokree.materialtabs.MaterialTabHost;
+import com.doodeec.utils.materialtabs.IMaterialTabListener;
+import com.doodeec.utils.materialtabs.MaterialTab;
+import com.doodeec.utils.materialtabs.MaterialTabHost;
 
 public class MainActivity extends ActionBarActivity implements IMaterialTabListener {
 
@@ -74,7 +74,7 @@ public class MainActivity extends ActionBarActivity implements IMaterialTabListe
 
         @Override
         public int getCount() {
-            return 3;
+            return 8;
         }
 
         @Override
