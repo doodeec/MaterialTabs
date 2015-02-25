@@ -1,1 +1,1 @@
-include ':materialtabslib', ':materialtabsdemo'
+include ':materialtabs', ':materialtabsdemo'
